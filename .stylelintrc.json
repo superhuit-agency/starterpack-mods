@@ -1,0 +1,43 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-prettier",
+		"stylelint-config-css-modules"
+	],
+	"rules": {
+		"at-rule-empty-line-before": null,
+		"at-rule-name-space-after": null,
+		"at-rule-no-unknown": null,
+		"block-no-empty": null,
+		"color-hex-length": null,
+		"comment-empty-line-before": null,
+		"custom-property-empty-line-before": null,
+		"declaration-block-no-duplicate-properties": null,
+		"declaration-block-no-shorthand-property-overrides": null,
+		"declaration-block-trailing-semicolon": null,
+		"declaration-colon-newline-after": null,
+		"declaration-empty-line-before": null,
+		"font-family-no-missing-generic-family-keyword": null,
+		"function-calc-no-invalid": null,
+		"function-calc-no-unspaced-operator": null,
+		"function-name-case": null,
+		"function-whitespace-after": null,
+		"indentation": null,
+		"length-zero-no-unit": null,
+		"no-descending-specificity": null,
+		"no-duplicate-selectors": null,
+		"no-empty-source": null,
+		"no-eol-whitespace": null,
+		"no-missing-end-of-source-newline": null,
+		"property-no-unknown": [
+			true,
+			{
+				"ignoreProperties": ["/^\\./", "/^>/", "/^&/"]
+			}
+		],
+		"rule-empty-line-before": null,
+		"selector-list-comma-newline-after": null,
+		"value-list-comma-newline-after": null,
+		"value-keyword-case": null
+	}
+}

@@ -1,0 +1,18 @@
+.edit-post-sidebar {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.supt-theme-sidebar {
+	display: grid;
+	flex-grow: 1;
+}
+
+.supt-customizer__controls .supt-customizer-control {
+	margin-top: 16px;
+}
+
+.supt-panel-demo-content {
+	align-self: end;
+}

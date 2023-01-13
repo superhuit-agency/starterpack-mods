@@ -1,0 +1,42 @@
+---
+name: 'Release Starterpack-mods plugin'
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+env:
+  PLUGIN_NAME: starterpack-mods
+
+jobs:
+  release:
+    name: "Release"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./.github/actions/build
+
+      - name: Generate plugin folder
+        uses: up9cloud/action-rsync@master
+        env:
+          MODE: local
+          SOURCE: .
+          TARGET: ${{ env.PLUGIN_NAME }}
+          ARGS: -r --exclude=.git --exclude=.github --exclude=.gitignore --exclude=.editorconfig --exclude=.nvmrc --exclude=.stylelintignore --exclude=.stylelintrc.json --exclude=composer.json --exclude=composer.lock --exclude=node_modules --exclude=package.json --exclude=yarn.lock --exclude=postcss.config.js --exclude=prettier.config.js --exclude=tsconfig.json --exclude=webpack.config.js --exclude=yarn.lock
+
+      - name: Generate zip file
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r ${{ env.PLUGIN_NAME }}.zip ${{ env.PLUGIN_NAME }}
+
+      - name: Create release
+        uses: 'marvinpinto/action-automatic-releases@latest'
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          prerelease: false
+          files: |
+            ${{ env.PLUGIN_NAME }}.zip
