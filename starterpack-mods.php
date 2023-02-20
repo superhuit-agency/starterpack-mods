@@ -3,7 +3,7 @@
  * Plugin Name:       Starterpack Mods
  * Plugin URI:        https://github.com/superhuit-agency/starterpack-mods
  * Description:       Starterpack's Customizer mods plugin.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            superhuit <@superhuit>
@@ -33,7 +33,7 @@ use function SUPT\StarterpackMods\remove_capabilities;
 
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
-define( 'SPCKMODS_PLUGIN_VERSION', '1.0.0' );
+define( 'SPCKMODS_PLUGIN_VERSION', '1.0.1' );
 define( 'SPCKMODS_PATH', __DIR__ );
 define( 'SPCKMODS_URL', plugin_dir_url(__FILE__) );
 

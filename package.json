@@ -1,7 +1,7 @@
 {
   "name": "starterpack-mods",
   "description": "Starterpack's Customizer mods plugin.",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "main": "index.js",
   "private": "true",
   "repository": {
