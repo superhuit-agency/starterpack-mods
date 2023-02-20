@@ -1,23 +1,33 @@
 {
-	"name": "supt/starterpack-mods",
-	"description": "Starterpack's Customizer mods plugin.",
-	"type": "wordpress-plugin",
-	"license": "MIT",
-	"version": "1.0.0",
-	"authors": [
-		{
-			"name": "superhuit",
-			"email": "tech@superhuit.ch",
-			"homepage": "https://www.superhuit.ch/en"
-		}
-	],
-	"require": {
-		"php": ">=7.4",
-		"composer/installers": "^1.9"
-	},
-	"config": {
-		"allow-plugins": {
-			"composer/installers": true
-		}
-	}
+    "name": "superhuit/starterpack-mods",
+    "description": "Starterpack's Customizer mods plugin.",
+    "type": "wordpress-plugin",
+    "keywords": [
+        "wordpress",
+        "customizer",
+        "design"
+    ],
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://github.com/superhuit-agency/starterpack-mods",
+    "authors": [
+        {
+            "name": "superhuit",
+            "email": "tech@superhuit.ch",
+            "homepage": "https://superhuit.ch",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/superhuit-agency/starterpack-mods/issues"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "^2.2"
+    }
 }
